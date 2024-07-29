@@ -1,0 +1,62 @@
+// import Poppins font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+$Poppins:"Poppins", sans-serif;
+
+// colours
+$dark: #0b0c0c;
+$light: #E9EAEC;
+$primary: #E4B61A;
+$secondary: #FBE134;
+$background: #2A2E34;
+
+// spacing
+$spacing-sm: 10px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$borderRadius: 12px;
+
+$headerHeight: 100px;
+
+
+// set breakpoints
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// breakpoint mixins
+@mixin breakpoint($point){
+
+    @if $point == sm {
+        @media (min-width: #{$screen-sm-min}){
+            @content;
+        }
+    }
+
+    @else if $point == md {
+        @media (min-width: #{$screen-md-min}){
+            @content;
+        }
+    }
+
+    @else if $point == lg {
+        @media (min-width: #{$screen-lg-min}){
+            @content;
+        }
+    }
+
+    @else if $point == xl {
+        @media (min-width: #{$screen-xl-min}){
+            @content;
+        }
+    }
+}

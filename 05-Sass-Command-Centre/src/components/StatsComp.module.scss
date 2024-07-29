@@ -1,0 +1,17 @@
+@import "../styles/Variables.scss";
+
+.statistics{
+    color: $light;
+
+    &__title{
+        margin-bottom: $spacing-sm;
+
+        @include breakpoint(md) {
+            margin-bottom: $spacing-md;
+        }
+    }
+}
+
+.number{
+    color: $primary;
+}

@@ -1,0 +1,34 @@
+@import "../styles/Variables.scss";
+
+.placeholder{
+    color: $light;
+    margin-bottom: $spacing-md;
+}
+.time{
+    color: $primary;
+    font-size: 0.75rem;
+}
+.reward{
+    color: $primary;
+}
+
+.assignment{
+    border-radius: $borderRadius;
+    margin-bottom: $spacing-md;
+    // padding: 0.75rem 1.25rem;
+
+    &__header{
+        color: $primary;
+        margin-bottom: $spacing-md;
+        font-size: 1.25rem;
+
+        @include breakpoint(md) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__content{
+        color: $light;
+        margin-bottom: $spacing-md;
+    }
+}

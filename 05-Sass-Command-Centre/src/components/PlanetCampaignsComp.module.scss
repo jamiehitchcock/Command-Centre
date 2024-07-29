@@ -1,0 +1,101 @@
+@import "../styles/Variables.scss";
+
+$terminid: #b4ac86;
+$automaton: #f83847;
+
+.campaignFilter {
+    margin-bottom: $spacing-md;
+
+    &__title {
+        margin-bottom: $spacing-md;
+        color: $primary;
+        font-size: 0.75rem;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        &__button {
+            background-color: $background;
+            color: $light;
+            padding: 0.75rem 1.25rem;
+            border: none;
+            // border: 1px solid $dark;
+            border-radius: $borderRadius;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba($light, 0.1);
+                color: $primary;
+            }
+
+            &.activeButton{
+                background: rgba($light, 0.1);
+                color: $primary;
+            }
+
+        }
+    }
+}
+
+.campaignPlanet {
+    background-color: $background;
+    color: $primary;
+    border: 5px solid $primary;
+    border-radius: $borderRadius;
+    margin-bottom: $spacing-md;
+    padding: 0.75rem 1.25rem;
+    max-width: 450px;
+
+    &.terminid{
+        border-color: $terminid;
+    }
+
+    &.automaton{
+        border-color: $automaton;
+    }
+
+    &__name {
+        color: $primary;
+        margin-bottom: $spacing-md;
+    }
+
+    &__image{
+        max-width: 100%;
+        height: auto;
+        border: 2px solid $primary;
+    }
+
+    &__faction {
+        color: $primary;
+        margin-bottom: $spacing-md;
+
+        &.terminid{
+            color: $terminid;
+        }
+
+        &.automaton{
+            color: $automaton;
+        }
+    }
+
+    &__playercount {
+        color: $light;
+        margin-bottom: $spacing-md;
+    }
+
+    &__biome {
+        color: $light;
+        margin-bottom: $spacing-md;
+    }
+
+    &__hazards {
+        color: $light;
+    }
+
+}

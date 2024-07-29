@@ -1,0 +1,53 @@
+@import "../styles/Variables.scss";
+
+.stratagemSearch {
+    color: $primary;
+    background-color: $background;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: $borderRadius;
+    margin-bottom: $spacing-md;
+    font-size: 1em;
+    background: rgba($light, 0.1);
+    color: $primary;
+
+    &:focus-visible{
+        caret-color: $primary;
+    }
+
+    &::placeholder {
+        color: $primary;
+    }
+}
+
+.stratagem {
+    border: 5px solid $primary;
+    border-radius: $borderRadius;
+    margin-bottom: $spacing-md;
+    padding: 0.75rem 1.25rem;
+    background-color: $background;
+    color: white;
+    max-width: 450px;
+
+    &__name {
+        color: $primary;
+        margin-bottom: $spacing-md;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+
+
+        &__image {
+            height: 100px;
+            margin-right: 1rem;
+        }
+
+    }
+}
+
+.arrow{
+    font-size: 2rem;
+    margin: 0.25rem;
+}

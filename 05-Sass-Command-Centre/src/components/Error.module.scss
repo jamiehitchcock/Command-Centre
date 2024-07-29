@@ -1,0 +1,69 @@
+@import "../styles/Variables.scss";
+
+.container {
+    // height: calc(100vh - #{$headerHeight});
+    min-height: calc(100vh - #{$headerHeight});
+    background: $background;
+    transition: 0.3s ease all;
+    padding: 0 1.5rem;
+    caret-color: transparent;
+
+    @include breakpoint(md) {
+        padding: 0 3rem;
+    }
+
+    section {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+
+        h1 {
+            font-size: 1.25rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(220deg, $primary, rgba($primary, 0.5));
+            border-radius: $borderRadius calc(#{$borderRadius}*10);
+            margin-bottom: $spacing-md;
+            width: fit-content;
+
+            @include breakpoint(md) {
+                font-size: 1.5rem;
+                padding: 1.5rem 2.5rem;
+            }
+        }
+    }
+}
+
+.error{
+    border-radius: $borderRadius;
+    margin-bottom: $spacing-md;
+    // padding: 0.75rem 1.25rem;
+
+    &__header{
+        color: $primary;
+        margin-bottom: $spacing-md;
+        font-size: 1.25rem;
+
+        @include breakpoint(md) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__content{
+        color: $light;
+        margin-bottom: $spacing-md;
+
+        &__button{
+            background: rgba($light, 0.1);
+            color: $light;
+            padding: 0.75rem 1.25rem;
+            border: none;
+            // border: 1px solid $dark;
+            border-radius: $borderRadius;
+            cursor: pointer;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
